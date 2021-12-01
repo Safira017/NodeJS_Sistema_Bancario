@@ -9,7 +9,7 @@ function totalNotas() {
 }
 
 function verificaSaque(saldo, saque) {
-    if(saque < saldo && saque > 0){
+    if(saque <= saldo && saque > 0){
         return true;
     }
     else {
