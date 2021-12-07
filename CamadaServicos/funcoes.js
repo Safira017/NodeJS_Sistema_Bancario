@@ -17,8 +17,8 @@ function verificaSaque(saldo, saque) {
     }   
 }
 
-function contarCelulas(saldo, saque, notas) {
-    while (saque < saldo && saque > 0 ) {
+function contarCedulas(saldo, saque, notas) {
+    while (saque > 0 ) {
         if(saque >= 200 && notas[7].quantidade > 0) {
             let contador = 0
             while (saque >= 200) {
@@ -27,6 +27,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 200
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 200 reais");
         }
         else if(saque >= 100 && notas[6].quantidade > 0) {
@@ -37,6 +38,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 100
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 100 reais");
         }
         else if(saque >= 50 && notas[5].quantidade > 0) {
@@ -47,6 +49,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 50
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 50 reais");
         }
         else if(saque >= 20 && notas[4].quantidade > 0) {
@@ -57,6 +60,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 20
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 20 reais");
         }
         else if(saque >= 10 && notas[3].quantidade > 0) {
@@ -67,6 +71,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 10
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 10 reais");
         }
         else if(saque >= 5 && notas[2].quantidade > 0) {
@@ -77,6 +82,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 5
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 5 reais");  
         }
         else if(saque >= 2 && notas[1].quantidade > 0) {
@@ -87,6 +93,7 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 2
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 2 reais");
         }
         else if(saque >= 1 && notas[0].quantidade > 0 ) {
@@ -97,9 +104,10 @@ function contarCelulas(saldo, saque, notas) {
                 saque -= 1
                 contador++  
             }
+            console.log("")
             console.log("Foram emitidas "+contador+" notas de 1 reais");
         }
     }   
 }
 
-export {totalNotas, verificaSaque, contarCelulas}
+export {totalNotas, verificaSaque, contarCedulas}
